@@ -8,25 +8,25 @@
     <title>阴阳太极图</title>
     <style>
         #yin-yang {
-            width: 96px;
-            height: 48px;
+            width: 48px;
+            height: 96px;
             margin: 100px auto;
             box-sizing: content-box;
             background-color: #eee;
             border-color: black;
             border-style: solid;
-            border-width: 2px 2px 50px 2px;
+            border-width: 2px 50px 2px 2px;
             border-radius: 50%;
             position: relative;
         }
 
         #yin-yang::before {
             content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
             width: 12px;
             height: 12px;
+            position: absolute;
+            top: 0;
+            left: 50%;
             box-sizing: content-box;
             background-color: #eee;
             border: 18px solid black;
@@ -35,11 +35,11 @@
 
         #yin-yang::after {
             content: "";
+            width: 12px;
+            height: 12px;
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 12px;
-            height: 12px;
             box-sizing: content-box;
             background-color: black;
             border: 18px solid #eee;
