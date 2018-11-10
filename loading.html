@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>loading动画</title>
+  <style type="text/css">
+    .loading {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  position: relative;
+}
+
+.loading::before, .loading::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  animation: linearSize 1.5s linear infinite;
+}
+
+.loading::after {
+  animation-delay: 0.75s;
+}
+
+@keyframes linearSize {
+  0% {
+    width: 0;height: 0;opacity: 1;
+  }
+  100% {
+    width: 100px;height: 100px;opacity: 0;
+  }
+}
+
+.welcomePage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #888;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  </style>
+</head>
+<body>
+  <div class="welcomePage">
+    <div class="loading"></div>
+  </div>
+</body>
+</html>
